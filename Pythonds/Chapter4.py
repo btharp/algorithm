@@ -196,4 +196,24 @@ for i in range(10):
 
 
 
+# %%  Dequeue
+# Palindrome-Checker 检测回文
+from pythonds.basic import Deque
+def PalChecker(aString):
+    chardeque=Deque()
+
+    for ch in aString:
+        chardeque.addRear(ch)
+
+    stillEquall=True 
+
+    while chardeque.size>1 and stillEquall:
+        first=chardeque.removeFront()
+        last=chardeque.removeRear() 
+        if first!=last:
+            stillEquall=False 
+
+    return stillEquall 
+
+
 # %%
